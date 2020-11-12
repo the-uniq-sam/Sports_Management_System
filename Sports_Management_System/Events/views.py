@@ -2,8 +2,12 @@ from django.shortcuts import render
 from .models import event
 from django.utils import timezone
 import time
+<<<<<<< HEAD
 
 
+=======
+from django.utils import timezone
+>>>>>>> 8f17f98558999da507d00cb803902379e80b64c7
 # Create your views here.
 def Events(request):
 
@@ -21,8 +25,12 @@ def Events(request):
             'time' : i.timestamp,
         }
 
+<<<<<<< HEAD
         # current = str(time.localtime().tm_year) + str('-') + str(time.localtime().tm_mon) + str('-') + str(time.localtime().tm_mday) + str(' ') + str(time.localtime().tm_hour) + str(':') + str(time.localtime().tm_min) + str(':') + str(time.localtime().tm_sec)
         current = str(timezone.now());
+=======
+        current = str(timezone.now())
+>>>>>>> 8f17f98558999da507d00cb803902379e80b64c7
         if(current<str(i.timestamp)):
             upcoming.append(details)
         else:
