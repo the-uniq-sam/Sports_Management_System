@@ -30,8 +30,21 @@
 
   </body>
 <h1>About</h1>
-{{event_details}}
+<div class="about">
+  <span><h2>Event Name:</h2></span>{{event_details.name}}<br>
+  {{event_details.timestamp}}
+  {{event_details.organiser}}<br>
+  {{event_details.about}}
+</div>
 <h1>Rules</h1>
+<div class="rules">
+  {%for i in event_details.rules %}
+  <ol>
+    <li>i(</li>
+  </ol>
+  {% endfor %}
+  <!-- {{event_details.rules}} -->
+</div>
 <h1>Prize</h1>
 <h1>Contact Details</h1>
 <h1>Viewers Link</h1>
