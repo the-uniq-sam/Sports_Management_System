@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import event
 import time
+from django.utils import timezone
 # Create your views here.
 def Events(request):
 
@@ -17,7 +18,7 @@ def Events(request):
             'time' : i.timestamp,
         }
 
-        current = str(time.gmtime().tm_year) + str('-') + str(time.gmtime().tm_mon) + str('-') + str(time.gmtime().tm_mday) + str(' ') + str(time.gmtime().tm_hour) + str(':') + str(time.gmtime().tm_min) + str(':') + str(time.gmtime().tm_sec)
+        current = str(timezone.now())
         if(current<str(i.timestamp)):
             upcoming.append(details)
         else:
