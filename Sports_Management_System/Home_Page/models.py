@@ -8,7 +8,7 @@ class RegistrationData(models.Model):
     tournamentid = models.IntegerField()
     phone = models.CharField(max_length=10)
     email = models.CharField(max_length=100)
-    point = models.IntegerField(default=0)
+    point = models.IntegerField(default='0')
 
 
     def __str__(self):

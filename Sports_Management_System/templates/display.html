@@ -39,18 +39,22 @@
     <!-- {% with temp=0 %} -->
     <!-- {% firstof 'rule1' as temp %} -->
     <div class="rules alignment" style="text-align:left; padding-left:60px;">
+      <ol>
       {% for rule in rules %}
-        <h2><ul>
+        <h2>
           <li>{{rule}}</li>
-        </ul> </h2>
+         </h2>
       {% endfor %}
+    </ol>
     </div>
 
     <!-- {%endwith%} -->
 
     <h1>Prize</h1>
-      <h2>{{winners.event_name}}</h2>
-
+    {%for i in winners %}
+      <h2>{{i.event_name}}</h2>
+      <h2></h2>
+    {% endfor %}
     <h1>Guests</h1>
     {% for guest in guest_details %}
               <div class="container ">
@@ -76,10 +80,15 @@
       <h2>Link for Live stream of the match is : <a href="#">{{event_details.link}}</a></h2>
 
     <h1>Learder Board</h1>
+    <ol>
     {%for i in candidate %}
-      <h2>{{i.id}} {{i.username}} {{i.tournamentid}}</h2>
-
+    <h2>
+      <li>
+        {{i.id}} {{i.username}} {{i.tournamentid}}
+      </li>
+    </h2>
     {%endfor%}
+    </ol>
   </body>
 
 

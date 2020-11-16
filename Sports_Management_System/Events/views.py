@@ -1,10 +1,6 @@
 from django.shortcuts import render
 from .models import *
-<<<<<<< HEAD
 from Home_Page.models import *
-=======
-
->>>>>>> 2a0ecfce1f2bdca15e8a60bdd8570f5fe6d60614
 import time
 from django.utils import timezone
 # Create your views here.
