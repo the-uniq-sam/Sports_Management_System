@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from Home_Page.models import *
 import time
 from django.utils import timezone
 # Create your views here.
@@ -80,9 +81,16 @@ def display_event(request,event_id):
         if i.event_id == event_id:
             contact_for_this.append(i)
 
+    #code to maintain leaderboard
+    candi = RegistrationData.objects.all()
+    cand_for_this = []
+    for i in candi:
+        if i.tournamentid == event_id:
+            cand_for_this.append(i)
+
     pass_to_display = {'event_details' : evnt, 'guest_details' : guest_for_this,
     'rules': exact_rules,'winners':prize_for_this,
-    'contact_details':contact_for_this}
+    'contact_details':contact_for_this,"candidate":cand_for_this}
 
 
     return render(request,'display.html',pass_to_display)

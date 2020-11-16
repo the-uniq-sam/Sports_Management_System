@@ -32,8 +32,7 @@
       <h1>About</h1>
       <h2>
       {{event_details.name}}</h2>
-      <h3>
-      {{event_details.about}}</h3>
+      <h3>{{event_details.about}}</h3>
 
     </div>
     <h1>Rules</h1>
@@ -75,6 +74,12 @@
 
     <h1>Viewers Link</h1>
       <h2>Link for Live stream of the match is : <a href="#">{{event_details.link}}</a></h2>
+
+    <h1>Learder Board</h1>
+    {%for i in candidate %}
+      <h2>{{i.id}} {{i.username}} {{i.tournamentid}}</h2>
+
+    {%endfor%}
   </body>
 
 
