@@ -82,7 +82,7 @@ def display_event(request,event_id):
             contact_for_this.append(i)
 
     #code to maintain leaderboard
-    candi = RegistrationData.objects.all()
+    candi = RegistrationData.objects.all().order_by('point')  
     cand_for_this = []
     for i in candi:
         if i.tournamentid == event_id:

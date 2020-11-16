@@ -79,12 +79,13 @@
     <h1>Viewers Link</h1>
       <h2>Link for Live stream of the match is : <a href="#">{{event_details.link}}</a></h2>
 
-    <h1>Learder Board</h1>
+    <h1>Leader Board</h1>
+    <h2>Player_id   Player_name  PLayer_Points</h2>
     <ol>
     {%for i in candidate %}
     <h2>
       <li>
-        {{i.id}} {{i.username}} {{i.tournamentid}}
+        {{i.id}}       {{i.username}}        {{i.point}}
       </li>
     </h2>
     {%endfor%}
