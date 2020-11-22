@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import FeedbackForm
+from .models import feedback
 # Create your views here.
 def Feedback(request):
     if request.method == 'POST':
