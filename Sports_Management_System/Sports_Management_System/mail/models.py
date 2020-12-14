@@ -27,7 +27,7 @@ class MailText(models.Model):
             #Then you can send the message. 
             send_mail(str(self.subject), 
                         str(self.message),
-                        '1008jainsamyak1@gmail.com',
+                        'write_your_email_here',
                         user_email, 
                         fail_silently=False)
         super(MailText, self).save(*args, **kwargs)
