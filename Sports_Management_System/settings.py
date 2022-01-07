@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '(lv5@rp4=xw-9-v_!pqsqe8c74207_t(+o++uam$a248w8f1rx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'sportsmanagementsystem.herokuapp.com']
 
