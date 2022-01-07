@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.conf.urls import url
+from django.views.static import static
 
 admin.site.site_header =  "Sports Management System"
 admin.site.index_title = "Welcome to Applications"
@@ -32,4 +33,6 @@ urlpatterns = [
     path('Feedback/', include('Feedback.urls')),
     path('Resource_Management/', include('Resource_Management.urls')),
     path('Notifications/',include('Notifications.urls')),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
