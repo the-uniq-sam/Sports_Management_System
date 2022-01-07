@@ -25,7 +25,7 @@ SECRET_KEY = '(lv5@rp4=xw-9-v_!pqsqe8c74207_t(+o++uam$a248w8f1rx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'sportsmanagementsystem.herokuapp.com']
 
 # Application definition
 
